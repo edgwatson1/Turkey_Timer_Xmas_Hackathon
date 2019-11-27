@@ -1,0 +1,9 @@
+#turkeyimage img {
+  height: 50vh;
+  z-index: 1 !important;
+}
+
+.container {
+  max-width: 70vw;
+  margin: 0 auto;
+}

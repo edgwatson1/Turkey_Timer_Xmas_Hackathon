@@ -1,0 +1,11 @@
+#turkeyimage img {
+  max-height: 30vh;
+  justify-content: center;
+  vertical-align: center;
+  max-width: 60vw;
+}
+
+p .weight {
+  font: "Lobster Two";
+  size: 4em;
+}

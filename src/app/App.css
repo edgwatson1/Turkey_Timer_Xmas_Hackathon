@@ -1,0 +1,58 @@
+body {
+  background: #64e3f7;
+  padding-top: 5vh;
+  margin: 0;
+  overflow: hidden;
+  z-index: 1 !important;
+}
+
+.App {
+  text-align: center;
+  font-family: "Lobster Two", sans-serif;
+  color: white;
+  z-index: 2 !important;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  z-index: 2 !important;
+}
+
+p {
+  text-align: center;
+  font-family: "p", sans-serif;
+  color: white;
+  z-index: 2 !important;
+}
+
+#logo img {
+  margin: 0 auto;
+  height: 15vh;
+  display: block;
+  justify-items: center;
+  z-index: 2 !important;
+}
+
+button.buttonstyle {
+  border: none;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 8px 30px;
+  background-color: #ff0160;
+  color: white;
+  box-shadow: 0 0 10px #f9f8ee, 0 0 10px #f9f8ee, 0 0 10px #f9f8ee;
+  border-radius: 5px;
+  font-family: "Lobster Two", sans-serif;
+  z-index: 2 !important;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: all 100ms ease-in;
+}
+
+div.centerdiv {
+  margin: 30px auto 0px auto;
+}
