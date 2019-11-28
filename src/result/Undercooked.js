@@ -29,7 +29,7 @@ class Undercooked extends React.Component {
             <img src="https://media.giphy.com/media/dxNivncsmNMP1aTvvT/giphy.gif"></img>
           </div>
           <h2 id="streak">You achieved a streak of {this.props.streak}.</h2>
-          <Link to="/LeaderboardPost">
+          <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
             <div className="centerdiv">
               <button className="buttonstyleleaderboard">
                 Add to leaderboard

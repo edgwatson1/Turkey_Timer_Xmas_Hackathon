@@ -30,7 +30,7 @@ class Overcooked extends React.Component {
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574874439/TurkeyTimer/burntturkey_cr81na.png"></img>
         </div>
         <h1>You achieved a streak of {this.props.streak}.</h1>
-        <Link to="/LeaderboardPost">
+        <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
           <div className="centerdiv">
             <button className="buttonstyleleaderboard">
               Add to leaderboard

@@ -106,7 +106,7 @@ class App extends React.Component {
                   <Homepage_1
                     balloonMessage={<h1>Roasting perfection starts now!</h1>}
                   />
-                  <Link to="/splash1">
+                  <Link to="/NZg0cBnWQ0GoeHMLlayxDqzRYqha3FsI">
                     <Button message="Play!" />
                     <p> </p>
                   </Link>
@@ -125,7 +125,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/splash1"
+            path="/NZg0cBnWQ0GoeHMLlayxDqzRYqha3FsI"
             render={() => (
               <>
                 <Homepage_2
@@ -138,7 +138,7 @@ class App extends React.Component {
                   }
                   image="https://res.cloudinary.com/edwardwatson/image/upload/v1574854519/TurkeyTimer/house_n7knxi.png"
                 />
-                <Link to="/turkeyweigh">
+                <Link to="/AUY1iTOK1LMB2WloTw5ZNg88LBzdKmXl">
                   <Button message="Let's cook" />
                 </Link>
               </>
@@ -148,7 +148,7 @@ class App extends React.Component {
 
           <Route
             exact
-            path="/turkeyweigh"
+            path="/AUY1iTOK1LMB2WloTw5ZNg88LBzdKmXl"
             render={() => (
               <>
                 <TurkeyWeigh
@@ -162,7 +162,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/oven"
+            path="/CXjQUjDHW2HieAT5YmVBulLvXacuAtiU"
             render={() => (
               <>
                 <Oven
@@ -177,7 +177,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/Result"
+            path="/EKjSa1pGYWJNQVAmVTLSJbSAu2pdGBeM"
             render={() => (
               <>
                 <Result
@@ -206,7 +206,7 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/LeaderboardPost"
+            path="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl"
             render={() => (
               <>
                 <div class="startpage">

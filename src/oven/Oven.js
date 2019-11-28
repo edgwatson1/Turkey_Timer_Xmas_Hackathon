@@ -54,7 +54,7 @@ class Oven extends React.Component {
             </div>{" "}
           </div>
         </div>
-        <Link to="/Result">
+        <Link to="/EKjSa1pGYWJNQVAmVTLSJbSAu2pdGBeM">
           <div className="centerdiv">
             <button onClick={this.props.stopTimer} className="buttonstyle">
               Pull it out!
