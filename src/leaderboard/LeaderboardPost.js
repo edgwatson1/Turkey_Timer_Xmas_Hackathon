@@ -48,9 +48,9 @@ class LeaderboardPost extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-          <br></br>/
+          <br></br>
           <button id="submit" className="buttonstyle">
-            <a>Submit</a>
+            Submit
           </button>
         </form>
         <p></p>
