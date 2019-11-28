@@ -10,6 +10,9 @@ class Overcooked extends React.Component {
   }
 
   render() {
+
+  const commiserationMessage = ["The bird caught fire and the fire engine came.","Smoke is filling the kitchen.","Your family hug you and tell you that it's OK, but they look incredibly sad.","At least you can use the turkey as a doorstop.","You tried to eat the burnt turkey, but it tastes like coal.","Your aunt says she is ashamed of you.","You fell asleep and now the kitchen is on fire.","Your family are now making spaghetti so they have something to eat."]
+
     return (
       <>
         <audio
@@ -20,7 +23,7 @@ class Overcooked extends React.Component {
         <h2>
           You got distracted and overcooked the turkey by{" "}
           {this.props.currentTime - this.props.targetCookingTime} minutes.{" "}
-          <br></br>Your family are hungry.
+          <br></br>{commiserationMessage[Math.ceil(Math.random() * 7)]}
         </h2>
 
         <div id="turkeyresult">
