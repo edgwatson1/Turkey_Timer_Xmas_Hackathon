@@ -16,6 +16,9 @@ class TurkeyWeigh extends React.Component {
   }
 
   render() {
+
+const celebrityChefs = ["Delia Smith","Jamie Oliver","Heston Marc Blumenthal","Gordon Ramsey","Michel Roux","Nigella Lawson","Mary Berry","Marco Pierre White", "Your favourite cookbook","A recipe you found online","Your smart speaker","Your grandma","Someone you follow on Twitter","A cookbook you found on top of the fridge"]
+
     return (
       <div className="container">
         <h1>Let's weigh your turkey. ⚖️</h1>
@@ -25,8 +28,7 @@ class TurkeyWeigh extends React.Component {
         <h2>
           Your turkey weighs in at </h2><div class="number">{this.props.weight}kg
         </div>
-        <h2>
-          Your favourite celebrity chef recommends that you cook it at 180ºC for</h2>
+        <h2>{celebrityChefs[Math.ceil(Math.random() * 13)]} recommends that you cook it at 180ºC for</h2>
           <div class="number">{minutesToHours(this.props.targetCookingTime)}</div>
         
 
