@@ -30,7 +30,7 @@ class Overcooked extends React.Component {
         <Link to="/LeaderboardPost">
           <div className="centerdiv">
             <button className="buttonstyleleaderboard">
-              Enter to leaderboard
+              Add to leaderboard
             </button>
           </div>
         </Link>

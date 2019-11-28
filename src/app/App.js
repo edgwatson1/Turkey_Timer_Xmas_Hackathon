@@ -77,7 +77,7 @@ class App extends React.Component {
   incrementStreak = () => {
     this.setState({
       streak: this.state.streak + 1,
-      timerPace: this.state.timerPace * 0.95,
+      timerPace: this.state.timerPace * 0.87,
       sensitivity: this.state.sensitivity * 0.9
     });
   };
@@ -113,7 +113,7 @@ class App extends React.Component {
                   <Link to="/leaderboard">
                     <div className="centerdiv">
                       <button className="buttonstyleleaderboard">
-                        Leaderboard
+                        Top 10 Leaderboard
                       </button>
                     </div>
                     <p> </p>
@@ -131,40 +131,19 @@ class App extends React.Component {
                   balloonMessage={
                     <>
                       <h1>
-                        It's Christmas morning, when all through the house.{" "}
+                        It's Christmas morning, and your wonderful family are depending on you to make the best Christmas roast ever. 👨‍👨‍👦‍👦🎄
                       </h1>
-                      <h1>Not a creature was stirring, not even a mouse. 🐁</h1>
                     </>
                   }
                   image="https://res.cloudinary.com/edwardwatson/image/upload/v1574854519/TurkeyTimer/house_n7knxi.png"
                 />
-                <Link to="/splash2">
-                  <Button message="Next" />
-                </Link>
-              </>
-            )}
-          />
-          <Route
-            exact
-            path="/splash2"
-            render={() => (
-              <>
-                <Homepage_2
-                  balloonMessage={
-                    <h1>
-                      It's time to put the turkey in for the perfect Christmas
-                      lunch for all the family. 🎄
-                    </h1>
-                  }
-                  image="https://res.cloudinary.com/edwardwatson/image/upload/v1574855394/TurkeyTimer/woman-flowers-holidays-girl-6270_aaco00.jpg"
-                />
                 <Link to="/turkeyweigh">
-                  <Button message="Let's cook!" />
-                  <p> </p>
+                  <Button message="Let's cook" />
                 </Link>
               </>
             )}
           />
+          
 
           <Route
             exact

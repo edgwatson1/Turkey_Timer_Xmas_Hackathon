@@ -1,11 +1,9 @@
-body .startpage {
-  overflow: hidden;
-}
+
 
 body {
   background: #64e3f7;
   margin : 0;
-
+overflow: auto;
 }
 
 .container {

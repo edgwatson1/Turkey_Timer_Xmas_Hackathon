@@ -20,19 +20,16 @@ class Undercooked extends React.Component {
           <h1>You ruined Christmas! 😞</h1>
           <h2>
             The turkey was undercooked by{" "}
-            {this.props.targetCookingTime - this.props.currentTime} minutes.{" "}
-            <br />{" "}
-          </h2>
-          <h2>Some of your family might get ill.</h2>
+            {this.props.targetCookingTime - this.props.currentTime} minutes.{" "}Some of your family may fall ill.</h2>
 
           <div id="turkeyresult">
             <img src="https://media.giphy.com/media/dxNivncsmNMP1aTvvT/giphy.gif"></img>
           </div>
-          <h1>You achieved a streak of {this.props.streak}.</h1>
+          <h2 id="streak">You achieved a streak of {this.props.streak}.</h2>
           <Link to="/LeaderboardPost">
             <div className="centerdiv">
               <button className="buttonstyleleaderboard">
-                Enter to leaderboard
+                Add to leaderboard
               </button>
             </div>
           </Link>

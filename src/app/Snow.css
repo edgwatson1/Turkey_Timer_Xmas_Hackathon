@@ -4,7 +4,6 @@ snow-container {
   width: 100%;
   max-width: 100%;
   top: 0;
-  overflow: hidden;
   z-index: 0;
   pointer-events: none;
 }

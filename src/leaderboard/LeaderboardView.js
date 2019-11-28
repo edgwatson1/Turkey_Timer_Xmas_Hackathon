@@ -9,17 +9,29 @@ class LeaderboardView extends React.Component {
 
   componentDidMount = () => {};
 
+
   render() {
+
+
+  const toTitleCase = (str) => {
+        return str.replace(
+            /\w\S*/g,
+            function(txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            }
+        );
+    }
+
     return (
       <div className="container">
-        <h1>Leaderboard 🏆</h1>
-        <h2>The best turkey chefs in the world are:</h2>
+        <h1>Top 10 Leaderboard 🏆</h1>
+        <p><strong>The best turkey chefs in the world are:</strong></p>
 
-        <div>
+        <div class="leaders">
           {this.props.leaders.map((leaders, index) => (
-            <h3>
-              {index + 1}. {leaders.Name} with a streak of {leaders.Streak}.
-            </h3>
+            <p>
+              {index + 1}. Chef {toTitleCase(leaders.Name)}, with a streak of {leaders.Streak}.
+            </p>
           ))}
         </div>
 
