@@ -23,7 +23,7 @@ const temperature = ["170","175","180","185","190","195","200","205","210","215"
 
     return (
       <div className="container">
-        <h1>Let's weigh your turkey. ⚖️</h1>
+        <h1>Let's weigh your turkey! ⚖️</h1>
         <div id="turkeyimage">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574856908/TurkeyTimer/scalesturkey_lucqlb.png"></img>
         </div>
