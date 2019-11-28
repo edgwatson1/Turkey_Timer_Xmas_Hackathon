@@ -3,6 +3,7 @@ import "./Oven.css";
 import Button from "../auxiliaries/button";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import { Line, Circle } from "rc-progress";
+import minutesToHours from "../auxiliaries/minutesToHours.js";
 
 class Oven extends React.Component {
   constructor(props) {
@@ -19,6 +20,12 @@ class Oven extends React.Component {
 
     return (
       <div id="0">
+        <audio
+          src="https://res.cloudinary.com/edwardwatson/video/upload/v1574934816/TurkeyTimer/181148__keweldog__timer-with-ding_lc3p6h.wav"
+          autoPlay
+          loop
+        />
+
         <h1>It's in the oven! ⏱️</h1>
         <div id="oven">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574861286/TurkeyTimer/oventurkey_kinsd0.png"></img>
@@ -36,14 +43,15 @@ class Oven extends React.Component {
           <div class="timers">
             <div class="div2">
               {" "}
-              <h2>Target time: {this.props.targetCookingTime} minutes</h2>{" "}
+              <h2>
+                Target time: {minutesToHours(this.props.targetCookingTime)}{" "}
+              </h2>{" "}
             </div>
             <div class="div3">
-              <h2>Current time: {this.props.currentTime} minutes</h2>{" "}
+              <h2>Current time: {minutesToHours(this.props.currentTime)}</h2>{" "}
             </div>
           </div>
         </div>
-
         <Link to="/Result">
           <div className="centerdiv">
             <button onClick={this.props.stopTimer} className="buttonstyle">

@@ -3,6 +3,7 @@ import "./turkeyweigh.css";
 import Button from "../auxiliaries/button";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import { thisExpression } from "@babel/types";
+import minutesToHours from "../auxiliaries/minutesToHours.js";
 
 class TurkeyWeigh extends React.Component {
   constructor(props) {
@@ -21,10 +22,12 @@ class TurkeyWeigh extends React.Component {
         <div id="turkeyimage">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574856908/TurkeyTimer/scalesturkey_lucqlb.png"></img>
         </div>
-        <h2>Your turkey weighs in at {this.props.weight}kg.</h2>
         <h2>
-          It is recommended that you cook it for {this.props.targetCookingTime}{" "}
-          minutes at 180ºC.
+          Your turkey weighs in at <h1>{this.props.weight}kg</h1>
+        </h2>
+        <h2>
+          It is recommended that you cook it at 180ºC for
+          <h1>{minutesToHours(this.props.targetCookingTime)}</h1>
         </h2>
 
         <Link to="/oven">

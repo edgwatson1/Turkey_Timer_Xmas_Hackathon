@@ -53,6 +53,7 @@ class LeaderboardPost extends React.Component {
             <a>Submit</a>
           </button>
         </form>
+        <p></p>
       </div>
     );
   }

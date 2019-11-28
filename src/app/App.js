@@ -28,6 +28,7 @@ class App extends React.Component {
       timerPace: 10,
       timerIsRunning: true,
       streak: 0,
+      sensitivity: 0.05,
       leaders: []
     };
   }
@@ -36,7 +37,7 @@ class App extends React.Component {
     const snapshot = await firestore
       .collection("leaders")
       .orderBy("Streak", "desc")
-      .limit(15)
+      .limit(10)
       .get();
 
     const leaders = snapshot.docs.map(doc => {
@@ -76,8 +77,8 @@ class App extends React.Component {
   incrementStreak = () => {
     this.setState({
       streak: this.state.streak + 1,
-      pace: this.state.pace - 0.5,
-      step: this.state.step + 1
+      timerPace: this.state.timerPace * 0.95,
+      sensitivity: this.state.sensitivity * 0.9
     });
   };
 
@@ -100,22 +101,24 @@ class App extends React.Component {
             path="/"
             render={() => (
               <>
-                <Snow />
-                <Homepage_1
-                  balloonMessage={<h1>Roasting perfection starts now!</h1>}
-                />
-                <Link to="/splash1">
-                  <Button message="Play!" />
-                  <p> </p>
-                </Link>
-                <Link to="/leaderboard">
-                  <div className="centerdiv">
-                    <button className="buttonstyleleaderboard">
-                      Leaderboard
-                    </button>
-                  </div>
-                  <p> </p>
-                </Link>
+                <div class="startpage">
+                  <Snow />
+                  <Homepage_1
+                    balloonMessage={<h1>Roasting perfection starts now!</h1>}
+                  />
+                  <Link to="/splash1">
+                    <Button message="Play!" />
+                    <p> </p>
+                  </Link>
+                  <Link to="/leaderboard">
+                    <div className="centerdiv">
+                      <button className="buttonstyleleaderboard">
+                        Leaderboard
+                      </button>
+                    </div>
+                    <p> </p>
+                  </Link>
+                </div>
               </>
             )}
           />
@@ -124,13 +127,14 @@ class App extends React.Component {
             path="/splash1"
             render={() => (
               <>
-                <Snow />
                 <Homepage_2
                   balloonMessage={
-                    <h1>
-                      It's Christmas morning, when all through the house. Not a
-                      creature was stirring, not even a mouse. 🐁
-                    </h1>
+                    <>
+                      <h1>
+                        It's Christmas morning, when all through the house.{" "}
+                      </h1>
+                      <h1>Not a creature was stirring, not even a mouse. 🐁</h1>
+                    </>
                   }
                   image="https://res.cloudinary.com/edwardwatson/image/upload/v1574854519/TurkeyTimer/house_n7knxi.png"
                 />
@@ -203,6 +207,7 @@ class App extends React.Component {
                   stopTimer={this.stopTimer}
                   incrementStreak={this.incrementStreak}
                   streak={this.state.streak}
+                  sensitivity={this.state.sensitivity}
                 />
               </>
             )}
@@ -212,8 +217,10 @@ class App extends React.Component {
             path="/Leaderboard"
             render={() => (
               <>
-                <Snow />
-                <LeaderboardView leaders={this.state.leaders} />
+                <div class="startpage">
+                  <Snow />
+                  <LeaderboardView leaders={this.state.leaders} />
+                </div>
               </>
             )}
           />
@@ -222,8 +229,10 @@ class App extends React.Component {
             path="/LeaderboardPost"
             render={() => (
               <>
-                <Snow />
-                <LeaderboardPost streak={this.state.streak} />
+                <div class="startpage">
+                  <Snow />
+                  <LeaderboardPost streak={this.state.streak} />
+                </div>
               </>
             )}
           />

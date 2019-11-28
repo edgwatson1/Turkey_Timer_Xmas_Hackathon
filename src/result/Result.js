@@ -20,25 +20,42 @@ class Result extends React.Component {
           this.props.targetCookingTime + max * this.props.targetCookingTime
       );
     };
-    if (between(0.03, 0.03)) {
+    if (between(this.props.sensitivity, this.props.sensitivity)) {
       return (
         <>
-          <PositiveResult
-            incrementStreak={this.props.incrementStreak}
-            streak={this.props.streak}
-          />
+          <div class="container">
+            <PositiveResult
+              incrementStreak={this.props.incrementStreak}
+              streak={this.props.streak}
+            />
+          </div>
         </>
       );
-    } else if (this.props.currentTime < this.props.targetCookingTime * 0.97) {
+    } else if (
+      this.props.currentTime <
+      this.props.targetCookingTime * (1 - this.props.sensitivity)
+    ) {
       return (
         <>
-          <Undercooked streak={this.props.streak} />
+          <div class="container">
+            <Undercooked
+              streak={this.props.streak}
+              targetCookingTime={this.props.targetCookingTime}
+              currentTime={this.props.currentTime}
+            />
+          </div>
         </>
       );
     } else {
       return (
         <>
-          <Overcooked streak={this.props.streak} />
+          <div class="container">
+            <Overcooked
+              streak={this.props.streak}
+              targetCookingTime={this.props.targetCookingTime}
+              currentTime={this.props.currentTime}
+            />
+          </div>
         </>
       );
     }

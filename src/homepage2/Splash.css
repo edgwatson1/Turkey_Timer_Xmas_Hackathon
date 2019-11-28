@@ -1,6 +1,5 @@
 #imagesplash img {
-  max-height: 50vh;
   justify-content: center;
   vertical-align: center;
-  max-width: 60vw;
+  max-height: 20vh;
 }
