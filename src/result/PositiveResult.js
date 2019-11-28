@@ -22,7 +22,7 @@ class PositiveResult extends React.Component {
 
         <h1>A fantastic Christmas! ⭐</h1>
         <h2>
-          You roasted the turkey for the perfect time and the whole family loved
+          You roasted your turkey for the perfect time and the whole family loved
           it.
         </h2>
         <div id="turkeyresult">

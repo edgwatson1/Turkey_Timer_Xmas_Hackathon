@@ -26,7 +26,7 @@ class Oven extends React.Component {
           loop
         />
 
-        <h1>It's in the oven! ⏱️</h1>
+        <h1>Your turkey's roasting! ⏱️</h1>
         <div id="oven">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574861286/TurkeyTimer/oventurkey_kinsd0.png"></img>
         </div>

@@ -118,7 +118,7 @@ class App extends React.Component {
                     </div>
                   </Link>
                   <br />
-                  <p>Made with 🤍 at the 30hr <a href="https://www.wildcodeschool.com/" target="_blank"> Wild Code School<br /></a>2019 Xmas Hackathon by <a href="https://www.linkedin.com/in/edward-watson/" target="_blank">Eddie Watson</a></p>
+                  <p>Made with ♥ at the 30hr <a href="https://www.wildcodeschool.com/" target="_blank"> Wild Code School<br /></a>2019 Xmas Hackathon by <a href="https://www.linkedin.com/in/edward-watson/" target="_blank">Eddie Watson</a></p>
                 </div>
               </>
             )}
