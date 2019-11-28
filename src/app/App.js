@@ -131,7 +131,7 @@ class App extends React.Component {
                   balloonMessage={
                     <>
                       <h1>
-                        It's Christmas morning, and your wonderful family are depending on you to make the best Christmas roast ever. 👨‍👨‍👦‍👦🎄
+                        It's Christmas morning, and your wonderful family are depending on you to make the best roast ever. 👨‍👨‍👦‍👦🎄
                       </h1>
                     </>
                   }
