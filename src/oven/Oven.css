@@ -18,7 +18,7 @@
 	color: #fff;
 	background: linear-gradient(-45deg, #ee7752, #e25822, #64e3f7, #64e3f7);
 	background-size: 1000% 400%;
-	animation: gradientBG 40s ease infinite;
+	animation: gradientBG 25s ease infinite;
 }
 
 @keyframes gradientBG {
