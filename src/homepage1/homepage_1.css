@@ -2,3 +2,8 @@
   height: 50vh;
   z-index: 1 !important;
 }
+#logo img {
+  padding-top: 5vh;
+
+}
+

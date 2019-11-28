@@ -4,7 +4,7 @@ body .startpage {
 
 body {
   background: #64e3f7;
-  padding-top: 5vh;
+
   margin: 0;
   z-index: 1 !important;
 }
@@ -25,6 +25,7 @@ body {
 
 h1 {
   font-family: "Lobster Two", sans-serif;
+  padding-top: 5vh;
 }
 
 h2 {

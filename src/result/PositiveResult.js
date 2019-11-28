@@ -20,7 +20,7 @@ class PositiveResult extends React.Component {
           autoPlay
         />
 
-        <h1>⭐ A fantastic Christmas! ⭐</h1>
+        <h1>A fantastic Christmas! ⭐</h1>
         <h2>
           You roasted the turkey for the perfect time and the whole family loved
           it.

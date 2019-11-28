@@ -19,7 +19,7 @@ class Oven extends React.Component {
       (this.props.currentTime / this.props.targetCookingTime) * 100;
 
     return (
-      <div id="0">
+      <div className="ovenbackground">
         <audio
           src="https://res.cloudinary.com/edwardwatson/video/upload/v1574934816/TurkeyTimer/181148__keweldog__timer-with-ding_lc3p6h.wav"
           autoPlay
