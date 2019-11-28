@@ -25,7 +25,7 @@ class App extends React.Component {
       targetCookingTime: 0,
       currentTime: 0,
       turkeyWeight: 0,
-      timerPace: 10,
+      timerPace: 9,
       timerIsRunning: true,
       streak: 0,
       sensitivity: 0.05,
@@ -52,8 +52,8 @@ class App extends React.Component {
   };
 
   defineTurkeyWeight = () => {
-    const turkeyWeight = Math.floor(Math.random() * 20) + 10;
-    const cookingTime = turkeyWeight * 37;
+    const turkeyWeight = Math.floor(Math.random() * 17) + 10;
+    const cookingTime = turkeyWeight * 35;
 
     this.setState({
       turkeyWeight: turkeyWeight,
