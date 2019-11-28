@@ -23,12 +23,12 @@ class TurkeyWeigh extends React.Component {
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574856908/TurkeyTimer/scalesturkey_lucqlb.png"></img>
         </div>
         <h2>
-          Your turkey weighs in at <h1>{this.props.weight}kg</h1>
-        </h2>
+          Your turkey weighs in at </h2><div class="number">{this.props.weight}kg
+        </div>
         <h2>
-          It is recommended that you cook it at 180ºC for
-          <h1>{minutesToHours(this.props.targetCookingTime)}</h1>
-        </h2>
+          Your favourite celebrity chef recommends that you cook it at 180ºC for</h2>
+          <div class="number">{minutesToHours(this.props.targetCookingTime)}</div>
+        
 
         <Link to="/oven">
           <Button message="Put it in the oven!" />

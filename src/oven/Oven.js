@@ -43,13 +43,15 @@ class Oven extends React.Component {
           <div class="timers">
             <div class="div2">
               {" "}
-              <h2>
-                Target time: {minutesToHours(this.props.targetCookingTime)}{" "}
-              </h2>{" "}
+              <div class="time">Target time: </div>
+              <div class="number">
+                {minutesToHours(this.props.targetCookingTime)}
+              </div>
             </div>
-            <div class="div3">
-              <h2>Current time: {minutesToHours(this.props.currentTime)}</h2>{" "}
-            </div>
+            <div class="time">Current time:</div>
+            <div class="number">
+              {minutesToHours(this.props.currentTime)}
+            </div>{" "}
           </div>
         </div>
         <Link to="/Result">

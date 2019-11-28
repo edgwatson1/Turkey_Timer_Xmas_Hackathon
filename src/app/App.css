@@ -11,14 +11,20 @@ body {
 
 .container {
   max-width: 500px;
+  padding-left: 3vw;
+  padding-right: 3vw;
   margin: 0 auto;
 }
 
 .App {
   text-align: center;
-  font-family: "Lobster Two", sans-serif;
   color: white;
   z-index: 2 !important;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Lobster Two", sans-serif;
 }
 
 h2 {
@@ -31,9 +37,21 @@ h2 {
 
 p {
   text-align: center;
-  font-family: "p", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   z-index: 2 !important;
+
+}
+
+.number {
+  font-family: "Roboto";
+  font-size: 2em;
+}
+
+.time {
+   font-family: "Lobster Two";
+  padding-top: 2vh;
+    font-size: 1.7em;
 }
 
 #logo img {

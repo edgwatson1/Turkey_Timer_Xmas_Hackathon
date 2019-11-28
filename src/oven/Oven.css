@@ -7,9 +7,12 @@
 .progress {
   max-width: 7vw;
   margin: 0 auto;
+  padding-top: 2vh;
 }
 
 #0 {
   color: blue !important;
   margin: 50px !important;
 }
+
+
