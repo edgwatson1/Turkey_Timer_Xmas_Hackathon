@@ -32,7 +32,7 @@ class Undercooked extends React.Component {
           <Link to="/LeaderboardPost">
             <div className="centerdiv">
               <button className="buttonstyleleaderboard">
-                Add achievement to leaderboard
+                Enter to leaderboard
               </button>
             </div>
           </Link>

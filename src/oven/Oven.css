@@ -16,9 +16,9 @@
 	height: 100vh;
 	font-family: "Exo", sans-serif;
 	color: #fff;
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #64e3f7, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradientBG 30s ease infinite;
+	background: linear-gradient(-45deg, #ee7752, #e25822, #64e3f7, #64e3f7);
+	background-size: 1000% 400%;
+	animation: gradientBG 40s ease infinite;
 }
 
 @keyframes gradientBG {

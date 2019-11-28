@@ -36,7 +36,7 @@ class Oven extends React.Component {
               <Circle
                 percent={percentComplete}
                 strokeWidth="8"
-                strokeColor="#ff0160"
+                strokeColor="#f9f8ee"
               />
             </div>{" "}
           </div>
