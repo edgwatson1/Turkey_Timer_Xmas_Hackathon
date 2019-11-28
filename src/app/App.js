@@ -116,8 +116,9 @@ class App extends React.Component {
                         Top 10 Leaderboard
                       </button>
                     </div>
-                    <p> </p>
                   </Link>
+                  <br />
+                  <p>Made with 🤍 at the 30hr <a href="https://www.wildcodeschool.com/"> Wild Code School<br /></a> Xmas Hackathon by <a href="https://www.linkedin.com/in/edward-watson/">Eddie Watson</a></p>
                 </div>
               </>
             )}
