@@ -91,7 +91,7 @@ button.buttonstyle {
   padding: 8px 30px;
   background-color: #ff0160;
   color: white;
-  box-shadow: 0 0 10px #f9f8ee, 0 0 10px #f9f8ee, 0 0 10px #f9f8ee;
+  box-shadow: 0 0 7px #f9f8ee, 0 0 7px #f9f8ee, 0 0 7px #f9f8ee;
   border-radius: 5px;
   font-family: "Lobster Two", sans-serif;
   z-index: 2 !important;
@@ -111,7 +111,7 @@ button.buttonstyle {
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 100ms ease-in;
 }
 

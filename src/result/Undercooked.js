@@ -11,7 +11,7 @@ class Undercooked extends React.Component {
 
   render() {
 
-    const commiserationMessage = ["Some of your family may fall ill.","It was so bad, someone cried.","The turkey was bright pink on the inside.","At least you'll never be asked to roast the turkey again.","Your family ended up ordering a Chinese takeaway.","Your uncle ended up finishing it off in a deep fat fryer.","Were you distracted by online shopping?","Your family only ate brussel sprouts for their lunch."]
+    const commiserationMessage = ["Some of your family may fall ill.","It was so bad, someone cried.","It was bright pink on the inside.","At least you'll never be asked to prepare the Christmas lunch ever again.","Your family ended up ordering a Chinese takeaway.","Your uncle ended up finishing it off in a deep fat fryer.","Were you distracted by online shopping?","Your family only ate brussel sprouts for their lunch.","It was the worst Christmas lunch you've ever had."]
 
     return (
       <>
@@ -23,7 +23,7 @@ class Undercooked extends React.Component {
           <h1>You ruined Christmas! 😞</h1>
           <h2>
             The turkey was undercooked by{" "}
-            {this.props.targetCookingTime - this.props.currentTime} minutes.<br></br>{commiserationMessage[Math.ceil(Math.random() * 7)]}</h2>
+            {this.props.targetCookingTime - this.props.currentTime} minutes.<br></br>{commiserationMessage[Math.ceil(Math.random() * 8)]}</h2>
 
           <div id="turkeyresult">
             <img src="https://media.giphy.com/media/dxNivncsmNMP1aTvvT/giphy.gif"></img>

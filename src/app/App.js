@@ -48,7 +48,7 @@ class App extends React.Component {
       leaders: leaders
     });
 
-    console.log(this.state.leaders);
+    
   };
 
   defineTurkeyWeight = () => {
