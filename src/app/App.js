@@ -8,8 +8,10 @@ import TurkeyWeigh from "../turkeyweigh/turkeyweigh";
 import Oven from "../oven/Oven";
 import Result from "../result/Result";
 import Snow from "./Snow";
-
+import LeaderboardView from "../leaderboard/LeaderboardView";
+import LeaderboardPost from "../leaderboard/LeaderboardPost";
 import Button from "../auxiliaries/button";
+import { firestore } from "../firebase";
 
 class App extends React.Component {
   constructor(props) {
@@ -26,9 +28,27 @@ class App extends React.Component {
       timerPace: 10,
       timerIsRunning: true,
       streak: 0,
-      step: 0
+      leaders: []
     };
   }
+
+  componentDidMount = async () => {
+    const snapshot = await firestore
+      .collection("leaders")
+      .orderBy("Streak", "desc")
+      .limit(15)
+      .get();
+
+    const leaders = snapshot.docs.map(doc => {
+      return { id: doc.id, ...doc.data() };
+    });
+
+    this.setState({
+      leaders: leaders
+    });
+
+    console.log(this.state.leaders);
+  };
 
   defineTurkeyWeight = () => {
     const turkeyWeight = Math.floor(Math.random() * 20) + 10;
@@ -82,10 +102,18 @@ class App extends React.Component {
               <>
                 <Snow />
                 <Homepage_1
-                  balloonMessage={<h1>Cooking perfection starts now!</h1>}
+                  balloonMessage={<h1>Roasting perfection starts now!</h1>}
                 />
                 <Link to="/splash1">
                   <Button message="Play!" />
+                  <p> </p>
+                </Link>
+                <Link to="/leaderboard">
+                  <div className="centerdiv">
+                    <button className="buttonstyleleaderboard">
+                      Leaderboard
+                    </button>
+                  </div>
                   <p> </p>
                 </Link>
               </>
@@ -158,6 +186,7 @@ class App extends React.Component {
                   startCurrentTimer={this.startCurrentTimer}
                   currentTime={this.state.currentTime}
                   stopTimer={this.stopTimer}
+                  streak={this.props.streak}
                 />
               </>
             )}
@@ -175,6 +204,26 @@ class App extends React.Component {
                   incrementStreak={this.incrementStreak}
                   streak={this.state.streak}
                 />
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/Leaderboard"
+            render={() => (
+              <>
+                <Snow />
+                <LeaderboardView leaders={this.state.leaders} />
+              </>
+            )}
+          />
+          <Route
+            exact
+            path="/LeaderboardPost"
+            render={() => (
+              <>
+                <Snow />
+                <LeaderboardPost streak={this.state.streak} />
               </>
             )}
           />

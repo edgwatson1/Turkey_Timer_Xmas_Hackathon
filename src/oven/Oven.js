@@ -18,7 +18,7 @@ class Oven extends React.Component {
       (this.props.currentTime / this.props.targetCookingTime) * 100;
 
     return (
-      <div className="container">
+      <div id="0">
         <h1>It's in the oven! ⏱️</h1>
         <div id="oven">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574861286/TurkeyTimer/oventurkey_kinsd0.png"></img>
@@ -28,7 +28,7 @@ class Oven extends React.Component {
             <div class="progress">
               <Circle
                 percent={percentComplete}
-                strokeWidth="5"
+                strokeWidth="8"
                 strokeColor="#ff0160"
               />
             </div>{" "}

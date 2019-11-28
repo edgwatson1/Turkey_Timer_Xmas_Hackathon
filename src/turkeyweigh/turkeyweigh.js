@@ -21,7 +21,7 @@ class TurkeyWeigh extends React.Component {
         <div id="turkeyimage">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574856908/TurkeyTimer/scalesturkey_lucqlb.png"></img>
         </div>
-        <h2>Your turkey weighs {this.props.weight}kg.</h2>
+        <h2>Your turkey weighs in at {this.props.weight}kg.</h2>
         <h2>
           It is recommended that you cook it for {this.props.targetCookingTime}{" "}
           minutes at 180ºC.

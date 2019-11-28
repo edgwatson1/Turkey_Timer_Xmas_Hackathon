@@ -48,6 +48,19 @@ button.buttonstyle {
   z-index: 2 !important;
 }
 
+.buttonstyleleaderboard {
+  border: none;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 8px 30px;
+  background-color: #7e8ea3;
+  color: white;
+  box-shadow: 0 0 10px #f9f8ee, 0 0 10px #f9f8ee, 0 0 10px #f9f8ee;
+  border-radius: 5px;
+  font-family: "Lobster Two", sans-serif;
+  z-index: 2 !important;
+}
+
 button:hover {
   transform: scale(1.1);
   transition: all 100ms ease-in;
