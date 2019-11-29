@@ -3,10 +3,36 @@ import "./Overcooked.css";
 import Button from "../auxiliaries/button";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import minutesToHours from "../auxiliaries/minutesToHours.js";
+import firebase from "../firebase";
 
 class Overcooked extends React.Component {
   constructor(props) {
     super(props);
+     this.onSubmit = this.onSubmit.bind(this);
+     this.onSubmitLeaderboard = this.onSubmitLeaderboard.bind(this);
+  }
+
+  
+ onSubmit(e) {
+
+    firebase
+      .firestore()
+      .collection("turkeysroastalltime")
+      .add({
+        Roasted: this.props.alltime + this.props.streak
+      })
+      .then(() => (window.location.reload()));
+  }
+
+  onSubmitLeaderboard(e) {
+
+    firebase
+      .firestore()
+      .collection("turkeysroastalltime")
+      .add({
+        Roasted: this.props.alltime + this.props.streak
+      })
+      .then(() => (window.location.hash = "/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl"));
   }
 
   render() {
@@ -30,23 +56,24 @@ class Overcooked extends React.Component {
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574874439/TurkeyTimer/burntturkey_cr81na.png"></img>
         </div>
         <h1>You achieved a streak of {this.props.streak}.</h1>
-        <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
-          <div className="centerdiv">
-            <button className="buttonstyleleaderboard">
-              Add to leaderboard
-            </button>
-          </div>
-        </Link>
-        <div className="centerdiv">
-          <Link to="/">
-            <button
-              value="Refresh Page"
-              onClick="window.location.reload();"
-              className="buttonstyle"
-            >
-              Play again!
-            </button>
+       <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
+            <div className="centerdiv">
+              <button className="buttonstyleleaderboard" href="javascript:void(0)" onClick={this.onSubmitLeaderboard}>
+                Add to leaderboard
+              </button>
+            </div>
           </Link>
+
+          <div className="centerdiv">
+            <Link to="/">
+              <button
+                value="Refresh Page"
+                onClick={this.onSubmit}
+                className="buttonstyle"
+              >
+                Play again!
+              </button>
+            </Link>
           <p> </p>
         </div>
       </>

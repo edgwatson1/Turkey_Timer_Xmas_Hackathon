@@ -42,6 +42,7 @@ class Result extends React.Component {
               streak={this.props.streak}
               targetCookingTime={this.props.targetCookingTime}
               currentTime={this.props.currentTime}
+              alltime={this.props.alltime}
             />
           </div>
         </>
@@ -54,6 +55,7 @@ class Result extends React.Component {
               streak={this.props.streak}
               targetCookingTime={this.props.targetCookingTime}
               currentTime={this.props.currentTime}
+              alltime={this.props.alltime}
             />
           </div>
         </>

@@ -3,14 +3,43 @@ import "./Undercooked.css";
 import Button from "../auxiliaries/button";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import minutesToHours from "../auxiliaries/minutesToHours.js";
+import firebase from "../firebase";
 
 class Undercooked extends React.Component {
   constructor(props) {
     super(props);
+     this.onSubmit = this.onSubmit.bind(this);
+     this.onSubmitLeaderboard = this.onSubmitLeaderboard.bind(this);
   }
+
+ onSubmit(e) {
+
+    firebase
+      .firestore()
+      .collection("turkeysroastalltime")
+      .add({
+        Roasted: this.props.alltime + this.props.streak
+      })
+      .then(() => (window.location.reload()));
+  }
+
+  onSubmitLeaderboard(e) {
+
+
+
+    firebase
+      .firestore()
+      .collection("turkeysroastalltime")
+      .add({
+        Roasted: this.props.alltime + this.props.streak
+      })
+      .then(() => (window.location.hash = "/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl"));
+  }
+
 
   render() {
 
+   
     const commiserationMessage = ["Some of your family may fall ill.","It was so bad, someone cried.","It was bright pink on the inside.","At least you'll never be asked to prepare the Christmas lunch ever again.","Your family ended up ordering a Chinese takeaway.","Your uncle ended up finishing it off in a deep fat fryer.","Were you distracted by online shopping?","Your family only ate brussel sprouts for their lunch.","It was the worst Christmas lunch you've ever had."]
 
     return (
@@ -29,18 +58,20 @@ class Undercooked extends React.Component {
             <img src="https://media.giphy.com/media/dxNivncsmNMP1aTvvT/giphy.gif"></img>
           </div>
           <h2 id="streak">You achieved a streak of {this.props.streak}.</h2>
+
           <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
             <div className="centerdiv">
-              <button className="buttonstyleleaderboard">
+              <button className="buttonstyleleaderboard" href="javascript:void(0)" onClick={this.onSubmitLeaderboard}>
                 Add to leaderboard
               </button>
             </div>
           </Link>
+
           <div className="centerdiv">
             <Link to="/">
               <button
                 value="Refresh Page"
-                onClick="window.location.reload();"
+                onClick={this.onSubmit}
                 className="buttonstyle"
               >
                 Play again!

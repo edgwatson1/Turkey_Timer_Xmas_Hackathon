@@ -29,7 +29,8 @@ class App extends React.Component {
       timerIsRunning: true,
       streak: 0,
       sensitivity: 0.05,
-      leaders: []
+      leaders: [],
+      alltime: null
     };
   }
 
@@ -44,12 +45,28 @@ class App extends React.Component {
       return { id: doc.id, ...doc.data() };
     });
 
-    this.setState({
-      leaders: leaders
+    
+
+     const turkeyroasted1 = await firestore
+      .collection("turkeysroastalltime")
+      .orderBy("Roasted", "desc")
+      .limit(1)
+      .get();
+
+       const alltimeroasted = turkeyroasted1.docs.map(doc => {
+      return { id: doc.id, ...doc.data() };
     });
 
+
+this.setState({
+      leaders: leaders,
+      alltime: alltimeroasted[0].Roasted
+    });
+  
     
   };
+
+
 
   defineTurkeyWeight = () => {
     const randomWeight = (Math.random() * 5) + 2;
@@ -119,6 +136,7 @@ class App extends React.Component {
                     </div>
                   </Link>
                   <br />
+                  <h2>🦃 {this.state.alltime} turkeys roasted since 29.11.19.</h2>
                   <p>Made with ♥ at the 30hr <a href="https://www.wildcodeschool.com/" target="_blank"> Wild Code School<br /></a>2019 Xmas Hackathon by <a href="https://www.linkedin.com/in/edward-watson/" target="_blank">Eddie Watson</a></p>
                 </div>
               </>
@@ -189,6 +207,7 @@ class App extends React.Component {
                   incrementStreak={this.incrementStreak}
                   streak={this.state.streak}
                   sensitivity={this.state.sensitivity}
+                  alltime={this.state.alltime}
                 />
               </>
             )}
