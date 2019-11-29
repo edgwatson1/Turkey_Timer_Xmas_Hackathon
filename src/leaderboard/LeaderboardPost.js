@@ -36,7 +36,7 @@ class LeaderboardPost extends React.Component {
         <h1>Congratulations! 🎈</h1>
         <img src="https://media.giphy.com/media/BLMzrDzM07M09017AQ/giphy.gif"></img>
         <h2>
-          You got a streak of {this.props.streak}!
+          You achieved a streak of {this.props.streak}!
         </h2>
         <form onSubmit={this.onSubmit}>
           <h1>Write your name below:</h1>
