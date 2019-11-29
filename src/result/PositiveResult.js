@@ -35,7 +35,7 @@ const h2Celebration=["Nobody can stop talking about how tasty your turkey was. I
         <div id="turkeyresult">
           <img src={turkeyPictureArray[Math.ceil(Math.random() * 19)]}></img>
         </div>
-        <h1>Cooking streak: {this.props.streak}</h1>
+        <h1>Roasting streak: {this.props.streak}</h1>
         <Link to="/AUY1iTOK1LMB2WloTw5ZNg88LBzdKmXl">
           <Button message="Continue streak!" />
         </Link>
