@@ -123,7 +123,7 @@ numberWithCommas = (x) => {x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")};
                 <div class="startpage">
                   <Snow />
                   <Homepage_1
-                    balloonMessage={<h1>Roasting perfection starts now!</h1>}
+                    balloonMessage={<h1>Roasting perfection starts today!</h1>}
                   />
                   <Link to="/NZg0cBnWQ0GoeHMLlayxDqzRYqha3FsI">
                     <Button message="Play!" />
