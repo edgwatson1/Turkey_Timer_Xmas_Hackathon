@@ -25,7 +25,7 @@ class App extends React.Component {
       targetCookingTime: 0,
       currentTime: 0,
       turkeyWeight: 0,
-      timerPace: 9,
+      timerPace: 15,
       timerIsRunning: true,
       streak: 0,
       sensitivity: 0.05,
@@ -52,8 +52,9 @@ class App extends React.Component {
   };
 
   defineTurkeyWeight = () => {
-    const turkeyWeight = Math.floor(Math.random() * 17) + 10;
-    const cookingTime = turkeyWeight * 35;
+    const randomWeight = (Math.random() * 5) + 2;
+     const turkeyWeight = randomWeight.toFixed(1);
+    const cookingTime = (turkeyWeight * 20) + 90;
 
     this.setState({
       turkeyWeight: turkeyWeight,
@@ -77,8 +78,8 @@ class App extends React.Component {
   incrementStreak = () => {
     this.setState({
       streak: this.state.streak + 1,
-      timerPace: this.state.timerPace * 0.87,
-      sensitivity: this.state.sensitivity * 0.9
+      timerPace: this.state.timerPace * 0.95,
+      sensitivity: this.state.sensitivity * 0.99
     });
   };
 
