@@ -137,7 +137,7 @@ numberWithCommas = (x) => {x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")};
                     </div>
                   </Link>
                   <br />
-                  <h2>🦃 {this.state.alltime.toLocaleString()} turkeys roasted since 29.11.19.</h2>
+                  <h2>🦃 {this.state.alltime.toLocaleString()} turkeys roasted since 29.11.19</h2>
                   <p>Made with ♥ at the 30hr <a href="https://www.wildcodeschool.com/" target="_blank"> Wild Code School<br /></a>2019 Xmas Hackathon by <a href="https://www.linkedin.com/in/edward-watson/" target="_blank">Eddie Watson</a></p>
                 </div>
               </>

@@ -55,14 +55,17 @@ class Overcooked extends React.Component {
         <div id="turkeyresult">
           <img src="https://res.cloudinary.com/edwardwatson/image/upload/v1574874439/TurkeyTimer/burntturkey_cr81na.png"></img>
         </div>
-        <h1>You achieved a streak of {this.props.streak}.</h1>
+        <h1>{this.props.streak > 0 ? "You achieved a streak of "+this.props.streak+"." : ""}</h1>
+
+ {this.props.streak > 0 ?
+
        <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
             <div className="centerdiv">
               <button className="buttonstyleleaderboard" href="javascript:void(0)" onClick={this.onSubmitLeaderboard}>
                 Add to leaderboard
               </button>
             </div>
-          </Link>
+          </Link> : ""}
 
           <div className="centerdiv">
             <Link to="/">

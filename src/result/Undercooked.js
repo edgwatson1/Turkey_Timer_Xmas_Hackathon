@@ -57,7 +57,9 @@ class Undercooked extends React.Component {
           <div id="turkeyresult">
             <img src="https://media.giphy.com/media/dxNivncsmNMP1aTvvT/giphy.gif"></img>
           </div>
-          <h2 id="streak">You achieved a streak of {this.props.streak}.</h2>
+          <h2 id="streak">{this.props.streak > 0 ? "You achieved a streak of "+this.props.streak+"." : ""}</h2>
+
+          {this.props.streak > 0 ?
 
           <Link to="/kV7Wse1MSbEdb6bzwrMtda1259ms4xCl">
             <div className="centerdiv">
@@ -65,7 +67,9 @@ class Undercooked extends React.Component {
                 Add to leaderboard
               </button>
             </div>
-          </Link>
+          </Link> 
+
+          : ""}
 
           <div className="centerdiv">
             <Link to="/">
